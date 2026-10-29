@@ -1,0 +1,11 @@
+# Job que executa o Visual data prep da camada silver (bronze -> silver_celulares_sp)
+# Visual data prep em bundle usa notebook_task apontando para o arquivo .designer.ipynb
+
+resources:
+  jobs:
+    silver_prep_celulares_sp:
+      name: Pipeline_Silver
+      tasks:
+        - task_key: run_visual_Pipeline_Silver
+          notebook_task:
+            notebook_path: ../src/Notebooks/silver_celulares_sp.designer.ipynb
